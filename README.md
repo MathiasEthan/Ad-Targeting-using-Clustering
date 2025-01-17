@@ -60,3 +60,6 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
    ```bash
    git clone https://github.com/yourusername/smartadgen.git
    cd SmartAdGen
+1. run in npm:
+   ```bash
+   npm run dev
