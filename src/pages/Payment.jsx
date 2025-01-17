@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
+
 import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField, Select, Slider, Dialog } from "@radix-ui/themes";
 import { ImageIcon, Link1Icon, PlusIcon } from "@radix-ui/react-icons";
 
 
 function Payment(){
     return (
-      <>
+      <>  
         <Box
           width="100%"
           mt="0"
@@ -36,12 +37,8 @@ function Payment(){
             </Box>
           </Flex>
         </Box>
-        <Box height="70px"></Box>
-
-        <Heading as="h1" mt="0" m="4">
-          Create your dream campaign today!
-        </Heading>
         <Flex direction="column" gap="4" width="40%" p="5" m="2">
+          <Heading as="h1" mt="7">Create your campaign today!</Heading>
           <Card variant="ghost">
             <Flex direction="column">
               <Text as="label" weight="medium" mb="2">
@@ -72,7 +69,7 @@ function Payment(){
                     <Text as="div" size="2" color="gray">
                       Upload from your device
                     </Text>
-                    <Button mt="4" variant="soft" radius="small">
+                    <Button mt="4" variant="soft" radius="small" onClick={function handleChange(){}}>
                       <Link1Icon />
                       Upload
                     </Button>
@@ -87,7 +84,10 @@ function Payment(){
                 <Flex direction="row" gap="3" mt="2" align="center">
                   <Dialog.Root>
                     <Dialog.Trigger>
-                      <Button variant="soft"><PlusIcon />Tags</Button>
+                      <Button variant="soft">
+                        <PlusIcon />
+                        Tags
+                      </Button>
                     </Dialog.Trigger>
 
                     <Dialog.Content maxWidth="450px">
@@ -101,11 +101,8 @@ function Payment(){
                           <Text as="div" size="2" mb="1" weight="bold">
                             Tags
                           </Text>
-                          <TextArea
-                            placeholder="Add tags separated by commas for example: fun, casual, lighthearted, inspirational..."
-                          />
+                          <TextArea placeholder="Add tags separated by commas for example: fun, casual, lighthearted, inspirational..." />
                         </label>
-                        
                       </Flex>
 
                       <Flex gap="3" mt="4" justify="end">
