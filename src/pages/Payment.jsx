@@ -1,9 +1,32 @@
-import React from "react";
+import {React, useState} from "react";
 import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField, Select, Slider, Dialog } from "@radix-ui/themes";
 import { ImageIcon, Link1Icon, PlusIcon } from "@radix-ui/react-icons";
 
 
 function Payment(){
+   // State to store the selected length value
+  const [length, setLength] = useState("short");
+  const [tags,setTags] = useState("")
+  const [caption, setCaption] = useState("")
+   // Function to handle radio button change
+  const handleRadioChange = (value) => {
+     setLength(value); // Update the state with the selected value
+     console.log(value)
+  };
+  const handleTagsChange = (e) => {
+     setTags(e.target.value); // Update the state with the selected value
+     console.log(e.target.value)
+  };
+  const handleCaptionChange = (e) => {
+    setCaption(e.target.value); // Update the state with the selected value
+    console.log(e.target.value)
+ };
+ function sendValues(){
+  console.log(length)
+  console.log(caption)
+  console.log(tags)
+ }
+
     return (
       <>
         <Box
@@ -83,7 +106,7 @@ function Payment(){
                 <Text as="label" weight="medium" mb="2">
                   Caption
                 </Text>
-                <TextArea placeholder="Write a caption that will be used as a base for our AI powered caption generation"></TextArea>
+                <TextArea value={caption} onChange={handleCaptionChange} placeholder="Write a caption that will be used as a base for our AI powered caption generation"></TextArea>
                 <Flex direction="row" gap="3" mt="2" align="center">
                   <Dialog.Root>
                     <Dialog.Trigger>
@@ -101,7 +124,7 @@ function Payment(){
                           <Text as="div" size="2" mb="1" weight="bold">
                             Tags
                           </Text>
-                          <TextArea
+                          <TextArea value={tags} onChange={handleTagsChange}
                             placeholder="Add tags separated by commas for example: fun, casual, lighthearted, inspirational..."
                           />
                         </label>
@@ -124,23 +147,24 @@ function Payment(){
               </Flex>
               <Box maxWidth="600px" mt="4">
                 <RadioCards.Root
-                  defaultValue="1"
+                  defaultValue="short"
                   columns={{ initial: "1", sm: "3" }}
                   variant="surface"
-                >
-                  <RadioCards.Item value="1">
+                  onValueChange={handleRadioChange}>
+                
+                  <RadioCards.Item value="short" name= "length">
                     <Flex direction="column" width="100%">
                       <Text weight="bold">Short</Text>
                       <Text>1-2 Sentance</Text>
                     </Flex>
                   </RadioCards.Item>
-                  <RadioCards.Item value="2">
+                  <RadioCards.Item value="medium" name= "length">
                     <Flex direction="column" width="100%">
                       <Text weight="bold">Medium</Text>
                       <Text>2-3 Sentences</Text>
                     </Flex>
                   </RadioCards.Item>
-                  <RadioCards.Item value="3">
+                  <RadioCards.Item value="long" name= "length">
                     <Flex direction="column" width="100%">
                       <Text weight="bold">Long</Text>
                       <Text>3-4 Sentences</Text>
@@ -183,7 +207,7 @@ function Payment(){
           </Flex>
           <Flex variant="row" justify="between" mt="4">
             <Button variant="surface">Cancel</Button>
-            <Button variant="soft">Next</Button>
+            <Button variant="soft" onClick={sendValues}>Next</Button>
           </Flex>
         </Flex>
       </>
