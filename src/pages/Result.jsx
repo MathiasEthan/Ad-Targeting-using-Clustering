@@ -18,7 +18,7 @@ const Result = (length,tags,caption, fileUrl) => {
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
                     src={fileUrl}
-                    alt="Bold typography"
+                    alt="Uploaded Image"
                     style={{
                       display: "block",
                       objectFit: "cover",
