@@ -20,7 +20,7 @@ const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl,langu
     setcaption2(Result[1])
     setcaption3(Result[2])
     setcaption4(Result[3])
-    setHeading1("For A 15-year-old male teenager.")
+    setHeading1("For A 15-year-old male teenager")
     setHeading2("For A 45-year-old unmarried man")
     setHeading3("For A 60-year-old lady")
     setHeading4("For A 25-year-old married man")

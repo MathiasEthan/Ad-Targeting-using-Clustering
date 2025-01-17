@@ -132,7 +132,11 @@ const handleFileChange = (event) => {
                   onChange={handleCaptionChange}
                   placeholder="Write a caption that will be used as a base for our AI powered caption generation"
                 ></TextArea>
-                <Flex direction="row" gap="3" mt="2" align="center">
+                <Text weight="medium" mb="2" gap="3" mt="4">
+                  Caption Tone
+                </Text>
+                <Flex direction="row" gap="3" mt="1" align="center">
+                
                   <Text
                     as="label"
                     weight="medium"
