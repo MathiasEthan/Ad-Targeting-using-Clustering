@@ -1,7 +1,7 @@
 import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 import { ImageIcon, } from "@radix-ui/react-icons";
-const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => {
+const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
   const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
