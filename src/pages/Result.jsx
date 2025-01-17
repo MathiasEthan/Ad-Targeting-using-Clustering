@@ -1,7 +1,7 @@
 import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
-import { ImageIcon, } from "@radix-ui/react-icons";
-const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
+
+const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => {
   const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
@@ -33,7 +33,17 @@ const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <ImageIcon height="130" width="100%" />
+                  <img
+                    src={tempfileUrl}
+                    alt="Bold typography"
+                    style={{
+                      display: "block",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: 140,
+                      backgroundColor: "var(--gray-5)",
+                    }}
+                  />
                 </Inset>
                 <Text as="p" size="3">
                   <Strong>
@@ -46,7 +56,17 @@ const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <ImageIcon height="130" width="100%" />
+                  <img
+                    src={tempfileUrl}
+                    alt="Bold typography"
+                    style={{
+                      display: "block",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: 140,
+                      backgroundColor: "var(--gray-5)",
+                    }}
+                  />
                 </Inset>
                 <Text as="p" size="3">
                   <Strong>
@@ -62,7 +82,17 @@ const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <ImageIcon height="130" width="100%" />
+                  <img
+                    src={tempfileUrl}
+                    alt="Bold typography"
+                    style={{
+                      display: "block",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: 140,
+                      backgroundColor: "var(--gray-5)",
+                    }}
+                  />
                 </Inset>
                 <Text as="p" size="3">
                   <Strong>
@@ -75,7 +105,17 @@ const Result = ({length,tags,caption, fileUrl, setTempfileUrl}) => {
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <ImageIcon height="130" width="100%" />
+                  <img
+                    src={tempfileUrl}
+                    alt="Bold typography"
+                    style={{
+                      display: "block",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: 140,
+                      backgroundColor: "var(--gray-5)",
+                    }}
+                  />
                 </Inset>
                 <Text as="p" size="3">
                   <Strong>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField, Select, Slider, Dialog, CheckboxCards } from "@radix-ui/themes";
+import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField, Select, Dialog, CheckboxCards } from "@radix-ui/themes";
 import { ImageIcon, Link1Icon, PlusIcon } from "@radix-ui/react-icons";
 
 
