@@ -1,7 +1,7 @@
 import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 
-const Result = ({length,tags,caption, fileUrl}) => {
+const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => {
   const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
   const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
   const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
@@ -22,6 +22,8 @@ const Result = ({length,tags,caption, fileUrl}) => {
     setHeading2("For A 45-year-old unmarried man")
     setHeading3("For A 60-year-old lady")
     setHeading4("For A 25-year-old married man")
+    setTempfileUrl(fileUrl)
+    
   }
     return (
       <Box position="relative" mb="9" mx="9">
@@ -32,7 +34,7 @@ const Result = ({length,tags,caption, fileUrl}) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src={fileUrl}
+                    src={tempfileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -52,7 +54,7 @@ const Result = ({length,tags,caption, fileUrl}) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src={fileUrl}
+                    src={tempfileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -75,7 +77,7 @@ const Result = ({length,tags,caption, fileUrl}) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src={fileUrl}
+                    src={tempfileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -95,7 +97,7 @@ const Result = ({length,tags,caption, fileUrl}) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src={fileUrl}
+                    src={tempfileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
