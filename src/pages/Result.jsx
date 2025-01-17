@@ -1,11 +1,11 @@
 import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
-
+import { ImageIcon, } from "@radix-ui/react-icons";
 const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => {
-  const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
-  const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
-  const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
-  const [caption4, setcaption4] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
+  const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
+  const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
+  const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
+  const [caption4, setcaption4] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [heading1, setHeading1] = useState("Test user")
   const [heading2, setHeading2] = useState("Test user")
   const [heading3, setHeading3] = useState("Test user")
@@ -33,40 +33,26 @@ const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => 
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <img
-                    src={tempfileUrl}
-                    alt="Bold typography"
-                    style={{
-                      display: "block",
-                      objectFit: "cover",
-                      width: "100%",
-                      height: 140,
-                      backgroundColor: "var(--gray-5)",
-                    }}
-                  />
+                  <ImageIcon height="130" width="100%" />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>{heading1}.<br /></Strong> {caption1}
+                  <Strong>
+                    {heading1}.<br />
+                  </Strong>{" "}
+                  {caption1}
                 </Text>
               </Card>
             </Box>
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <img
-                    src={tempfileUrl}
-                    alt="Bold typography"
-                    style={{
-                      display: "block",
-                      objectFit: "cover",
-                      width: "100%",
-                      height: 140,
-                      backgroundColor: "var(--gray-5)",
-                    }}
-                  />
+                  <ImageIcon height="130" width="100%" />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>{heading2}.<br /></Strong> {caption2}
+                  <Strong>
+                    {heading2}.<br />
+                  </Strong>{" "}
+                  {caption2}
                 </Text>
               </Card>
             </Box>
@@ -76,40 +62,26 @@ const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => 
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <img
-                    src={tempfileUrl}
-                    alt="Bold typography"
-                    style={{
-                      display: "block",
-                      objectFit: "cover",
-                      width: "100%",
-                      height: 140,
-                      backgroundColor: "var(--gray-5)",
-                    }}
-                  />
+                  <ImageIcon height="130" width="100%" />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>{heading3}.<br /></Strong> {caption3}
+                  <Strong>
+                    {heading3}.<br />
+                  </Strong>{" "}
+                  {caption3}
                 </Text>
               </Card>
             </Box>
             <Box maxWidth="240px">
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
-                  <img
-                    src={tempfileUrl}
-                    alt="Bold typography"
-                    style={{
-                      display: "block",
-                      objectFit: "cover",
-                      width: "100%",
-                      height: 140,
-                      backgroundColor: "var(--gray-5)",
-                    }}
-                  />
+                  <ImageIcon height="130" width="100%" />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>{heading4}.<br /></Strong> {caption4}
+                  <Strong>
+                    {heading4}.<br />
+                  </Strong>{" "}
+                  {caption4}
                 </Text>
               </Card>
             </Box>

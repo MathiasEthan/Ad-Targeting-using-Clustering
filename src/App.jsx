@@ -27,7 +27,7 @@ function App() {
     <>
       <div style={myStyle}></div>
       <Theme
-        accentColor="indigo"
+        accentColor="blue"
         panelBackground="solid"
         scaling="100%"
         radius="medium"
