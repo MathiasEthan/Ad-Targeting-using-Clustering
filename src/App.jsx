@@ -11,7 +11,7 @@ function App() {
   const [length, setLength] = useState("short");
   const [tags, setTags] = useState("");
   const [caption, setCaption] = useState("");
-  const [fileUrl, setFileUrl] = useState(null); // State to store the file URL
+  const [fileUrl, setFileUrl] = useState("https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"); // State to store the file URL
 
   const myStyle = {
     backgroundImage: `url(${background})`,
@@ -43,7 +43,7 @@ function App() {
             fileUrl={fileUrl}
             setFileUrl={setFileUrl}
           />
-          <Result length={length} tags={tags} caption={caption} />
+          <Result length={length} tags={tags} caption={caption} fileUrl={fileUrl} />
         </Flex>
       </Theme>
     </>

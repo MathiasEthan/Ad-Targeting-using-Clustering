@@ -1,12 +1,27 @@
-import React from 'react';
+import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 
-const Result = (length,tags,caption, fileUrl) => {
-  function getValues(){
-    console.log(length)
-    console.log(tags)
-    console.log(caption)
-    console.log(fileUrl)
+const Result = ({length,tags,caption, fileUrl}) => {
+  const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
+  const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
+  const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
+  const [caption4, setcaption4] = useState("is the art and technique of arranging type to make written language legible, readable andappealing when displayed.");
+  const [heading1, setHeading1] = useState("Test user")
+  const [heading2, setHeading2] = useState("Test user")
+  const [heading3, setHeading3] = useState("Test user")
+  const [heading4, setHeading4] = useState("Test user")
+  async function getValues(){
+    let tempCaption = caption.replaceAll(" ","-")
+    let generatedCaptions = await fetch(`http://127.0.0.1:5000/captions/${tempCaption}/${tags}/${length}`)
+    let Result = await generatedCaptions.json()
+    setcaption1(Result[0])
+    setcaption2(Result[1])
+    setcaption3(Result[2])
+    setcaption4(Result[3])
+    setHeading1("For A 15-year-old male teenager.")
+    setHeading2("For A 45-year-old unmarried man")
+    setHeading3("For A 60-year-old lady")
+    setHeading4("For A 25-year-old married man")
   }
     return (
       <Box position="relative" mb="9" mx="9">
@@ -29,9 +44,7 @@ const Result = (length,tags,caption, fileUrl) => {
                   />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>Typography</Strong> is the art and technique of
-                  arranging type to make written language legible, readable and
-                  appealing when displayed.
+                  <Strong>{heading1}.<br /></Strong> {caption1}
                 </Text>
               </Card>
             </Box>
@@ -39,7 +52,7 @@ const Result = (length,tags,caption, fileUrl) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                    src={fileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -51,9 +64,7 @@ const Result = (length,tags,caption, fileUrl) => {
                   />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>Typography</Strong> is the art and technique of
-                  arranging type to make written language legible, readable and
-                  appealing when displayed.
+                  <Strong>{heading2}.<br /></Strong> {caption2}
                 </Text>
               </Card>
             </Box>
@@ -64,7 +75,7 @@ const Result = (length,tags,caption, fileUrl) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                    src={fileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -76,9 +87,7 @@ const Result = (length,tags,caption, fileUrl) => {
                   />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>Typography</Strong> is the art and technique of
-                  arranging type to make written language legible, readable and
-                  appealing when displayed.
+                  <Strong>{heading3}.<br /></Strong> {caption3}
                 </Text>
               </Card>
             </Box>
@@ -86,7 +95,7 @@ const Result = (length,tags,caption, fileUrl) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                    src={fileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
@@ -98,9 +107,7 @@ const Result = (length,tags,caption, fileUrl) => {
                   />
                 </Inset>
                 <Text as="p" size="3">
-                  <Strong>Typography</Strong> is the art and technique of
-                  arranging type to make written language legible, readable and
-                  appealing when displayed.
+                  <Strong>{heading4}.<br /></Strong> {caption4}
                 </Text>
               </Card>
             </Box>

@@ -20,18 +20,13 @@ function Payment({ caption, setCaption, length, setLength, tags, setTags, fileUr
  };
 const handleFileChange = (event) => {
     const file = event.target.files[0]; // Get the selected file
+    console.log(file)
     if (file) {
-      const fileUrl = URL.createObjectURL(file); // Generate a temporary URL
-      setFileUrl(fileUrl); // Update the parent state
-      console.log(fileUrl); // Log the file URL
+      const files = URL.createObjectURL(file); // Generate a temporary URL
+      setFileUrl(files); // Update the parent state
+      console.log(files); // Log the file URL
     }
   };
-
- function sendValues(){
-  console.log(length)
-  console.log(caption)
-  console.log(tags)
- }
  
 
     return (
@@ -227,7 +222,7 @@ const handleFileChange = (event) => {
         </Flex>
         <Flex variant="row" justify="between" mt="4">
         <Button variant="surface">Cancel</Button>
-        <Button variant="soft" onClick={sendValues}>
+        <Button variant="soft">
           Next
         </Button>
         </Flex>
