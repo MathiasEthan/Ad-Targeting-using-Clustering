@@ -1,7 +1,7 @@
 import {React,useState} from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 
-const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => {
+const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl,language}) => {
   const [caption1, setcaption1] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption2, setcaption2] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
   const [caption3, setcaption3] = useState("is the art and technique of arranging type to make written language legible, readable and appealing when displayed.");
@@ -11,8 +11,10 @@ const Result = ({length,tags,caption, fileUrl, tempfileUrl, setTempfileUrl}) => 
   const [heading3, setHeading3] = useState("Test user")
   const [heading4, setHeading4] = useState("Test user")
   async function getValues(){
+    console.log(language)
     let tempCaption = caption.replaceAll(" ","-")
-    let generatedCaptions = await fetch(`http://127.0.0.1:5000/captions/${tempCaption}/${tags}/${length}`)
+    console.log(`http://127.0.0.1:5000/captions/${tempCaption}/${tags}/${length}/${language}`)
+    let generatedCaptions = await fetch(`http://127.0.0.1:5000/captions/${tempCaption}/${tags}/${length}/${language}`)
     let Result = await generatedCaptions.json()
     setcaption1(Result[0])
     setcaption2(Result[1])

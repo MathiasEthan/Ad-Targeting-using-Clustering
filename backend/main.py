@@ -8,8 +8,8 @@ app = Flask(__name__)
 load_dotenv()
 CORS(app)
 
-@app.route("/captions/<caption>/<tags>/<length>")
-def generate_captions(caption, tags, length):
+@app.route("/captions/<caption>/<tags>/<length>/<language>")
+def generate_captions(caption, tags, length,language):
     lengths = {
         "long" : "3-4 sentences",
         "short" : "1-2 sentences",
@@ -19,6 +19,7 @@ def generate_captions(caption, tags, length):
     prompt_template = f"""
     I have a caption: {caption}. The user has also defined some tags that he will need in his caption: {tags}. Ensure that all the generated captions strictly adhere to these guidelines.
     the length of the caption should be : {lengths[length]}
+    Captions should be in: {language}
 
     Generate variations of this caption tailored to the following audience segments to maximize engagement. Each variation should:
 

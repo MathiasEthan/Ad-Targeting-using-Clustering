@@ -3,7 +3,7 @@ import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField
 import { ImageIcon, Link1Icon, PlusIcon } from "@radix-ui/react-icons";
 
 
-function Payment({ caption, setCaption, length, setLength, tags, setTags, fileUrl, setFileUrl }) {
+function Payment({ caption, setCaption, length, setLength, tags, setTags, fileUrl, setFileUrl,setLanguage }) {
   
    // Function to handle radio button change
   const handleRadioChange = (value) => {
@@ -219,7 +219,7 @@ const handleFileChange = (event) => {
                 <Text weight="medium" mb="3">
                   language
                 </Text>
-                <Select.Root defaultValue="english" mt="0" size="3">
+                <Select.Root defaultValue="english" mt="0" size="3" onValueChange={(value) => setLanguage(value)}>
                   <Select.Trigger />
                   <Select.Content>
                     <Select.Group>
