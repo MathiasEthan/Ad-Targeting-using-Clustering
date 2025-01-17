@@ -72,3 +72,16 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
    ```bash
    git clone https://github.com/yourusername/smartadgen.git
    cd SmartAdGen
+2. Set up frontend:
+   ```bash
+   npm install
+   npm run dev
+3. Set up backend:
+   ```bash
+   cd backend
+   (first configure your gemini api key in a .env file in this folder using "API_KEY" as the key)
+   python main.py
+4. Open your browser :
+   ```bash
+   The frontend will be running at: http://localhost:3000
+   The backend API will be accessible at: http://localhost:5000
