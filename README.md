@@ -1,6 +1,6 @@
 # **SmartAdGen**
 
-SmartAdGen is an advanced ad-serving platform that uses clustering and machine learning to deliver highly targeted advertisements to users. By combining **DBSCAN** for user clustering and **Softmax** for optimized caption selection, SmartAdGen ensures precise ad delivery and high engagement.
+SmartAdGen is an advanced ad-serving platform that uses clustering and machine learning to deliver highly targeted advertisements to users. By combining **DBSCAN** for user clustering and **Softmax** for predicting product categories, along with **Gemini** for AI-powered caption generation, SmartAdGen ensures precise ad delivery and high engagement.
 
 ---
 
@@ -11,8 +11,12 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
 - Targets ads to user groups that are most likely to engage with the content.
 
 ### 🧠 AI-Powered Caption Generation
-- Utilizes **Softmax** in Python to select the most relevant and engaging captions for each user cluster.
-- Dynamically adapts captions based on cluster attributes, increasing user interaction.
+- Utilizes **Gemini** to generate highly engaging captions tailored to each user cluster.
+- Captions dynamically adapt to cluster attributes, increasing user interaction.
+
+### 🛒 Product Category Prediction
+- Uses **Softmax** to predict the product categories that users are most likely to purchase.
+- Ensures that ads feature products with the highest likelihood of conversion for each cluster.
 
 ### 🎯 User-Centric Targeting
 - Analyzes user behavior and demographic data to improve ad delivery precision.
@@ -20,17 +24,21 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
 
 ### ⚡ Fast and Modern Frontend
 - Built using **Vite** and **React** for a blazing-fast and interactive user experience.
-- Styled with **Radix Themes** and **Radix Icons** for a consistent and modern look.
+- Styled with **Radix UI**, **Radix Themes**, and **Radix Icons** for a consistent, accessible, and modern look.
+
+### 🔄 Robust Backend
+- Powered by **Flask**, providing a lightweight yet powerful backend for handling clustering and product prediction tasks.
 
 ---
 
 ## **Technologies Used**
 - **Vite**: Lightning-fast development environment for the frontend.
 - **React**: For building a responsive and modern user interface.
-- **Radix Themes** and **Radix Icons**: For UI styling and iconography.
+- **Radix UI**, **Radix Themes**, and **Radix Icons**: For styling, components, and iconography.
 - **DBSCAN**: Clustering algorithm used to group users into meaningful segments.
-- **Softmax**: For caption selection, optimizing engagement rates.
-- **Python**: Backend language for machine learning and data processing.
+- **Softmax**: For predicting the product categories users are most likely to purchase.
+- **Gemini**: AI-powered caption generator for creating engaging ad captions.
+- **Flask**: Lightweight and efficient backend framework.
 
 ---
 
@@ -40,10 +48,14 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
    - **DBSCAN** groups users into clusters based on behavioral data (e.g., browsing history, preferences).
    - Outliers are either ignored or handled as separate entities.
 
-2. **Caption Generation**:
-   - A Python-based machine learning model leverages **Softmax** to generate captions that are most likely to engage the target cluster.
+2. **Product Prediction**:
+   - **Softmax** predicts the product categories that are most relevant to each user cluster.
+   - Ensures the ad content aligns with the users' likely purchasing intent.
 
-3. **Ad Delivery**:
+3. **Caption Generation**:
+   - **Gemini** generates AI-driven captions that are optimized for engagement and tailored to each user cluster.
+
+4. **Ad Delivery**:
    - Ads are matched to clusters and served through the React frontend, ensuring real-time, targeted delivery.
 
 ---
@@ -52,7 +64,7 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
 
 ### Prerequisites
 - **Node.js** and **npm** installed for the frontend.
-- **Python 3.7+** installed for the backend.
+- **Python 3.7+** and **Flask** installed for the backend.
 
 ### Steps
 
@@ -60,6 +72,3 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
    ```bash
    git clone https://github.com/yourusername/smartadgen.git
    cd SmartAdGen
-1. run in npm:
-   ```bash
-   npm run dev
