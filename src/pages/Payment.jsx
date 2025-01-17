@@ -3,11 +3,8 @@ import { Box, Flex, Button, Heading, Card, TextArea, Text, RadioCards, TextField
 import { ImageIcon, Link1Icon, PlusIcon } from "@radix-ui/react-icons";
 
 
-function Payment(){
-   // State to store the selected length value
-  const [length, setLength] = useState("short");
-  const [tags,setTags] = useState("")
-  const [caption, setCaption] = useState("")
+function Payment({caption,setCaption,length,setLength,tags,setTags}){
+  
    // Function to handle radio button change
   const handleRadioChange = (value) => {
      setLength(value); // Update the state with the selected value

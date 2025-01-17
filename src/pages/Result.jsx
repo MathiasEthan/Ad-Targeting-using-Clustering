@@ -1,7 +1,12 @@
 import React from 'react';
-import { Box, Flex, Text, Card, Inset, Strong, Section } from "@radix-ui/themes";
+import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 
-const Result = () => {
+const Result = (length,tags,caption) => {
+  function getValues(){
+    console.log(length)
+    console.log(tags)
+    console.log(caption)
+  }
     return (
       <Box position="relative" mb="9" mx="9">
         <Section></Section>
@@ -52,6 +57,7 @@ const Result = () => {
               </Card>
             </Box>
           </Flex>
+          <Button onClick={getValues}>Generate</Button>
           <Flex gap="4">
             <Box maxWidth="240px">
               <Card size="2">
