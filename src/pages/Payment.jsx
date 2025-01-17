@@ -217,19 +217,16 @@ const handleFileChange = (event) => {
               </Box>
               <Flex direction="column" mt="3">
                 <Text weight="medium" mb="3">
-                  Primary Location
+                  language
                 </Text>
-                <Select.Root defaultValue="india" mt="0" size="3">
+                <Select.Root defaultValue="english" mt="0" size="3">
                   <Select.Trigger />
                   <Select.Content>
                     <Select.Group>
-                      <Select.Item value="india">India</Select.Item>
-                      <Select.Item value="usa">
-                        United States of America
-                      </Select.Item>
-                      <Select.Item value="United Kingdom">
-                        United Kingdom
-                      </Select.Item>
+                      <Select.Item value="english">English</Select.Item>
+                      <Select.Item value="hindi">Hindi</Select.Item>
+                      <Select.Item value="french">French</Select.Item>
+                      <Select.Item value="spanish">Spanish</Select.Item>
                     </Select.Group>
                   </Select.Content>
                 </Select.Root>
@@ -256,7 +253,6 @@ const handleFileChange = (event) => {
                   <Text>ML Model</Text>
                 </Flex>
               </CheckboxCards.Item>
-              
             </CheckboxCards.Root>
           </Box>
 
