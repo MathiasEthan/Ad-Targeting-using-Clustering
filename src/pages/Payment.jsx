@@ -20,18 +20,13 @@ function Payment({ caption, setCaption, length, setLength, tags, setTags, fileUr
  };
 const handleFileChange = (event) => {
     const file = event.target.files[0]; // Get the selected file
+    console.log(file)
     if (file) {
-      const fileUrl = URL.createObjectURL(file); // Generate a temporary URL
-      setFileUrl(fileUrl); // Update the parent state
-      console.log(fileUrl); // Log the file URL
+      const files = URL.createObjectURL(file); // Generate a temporary URL
+      setFileUrl(files); // Update the parent state
+      console.log(files); // Log the file URL
     }
   };
-
- function sendValues(){
-  console.log(length)
-  console.log(caption)
-  console.log(tags)
- }
  
 
     return (
@@ -97,9 +92,15 @@ const handleFileChange = (event) => {
             <Text as="div" size="2" weight="bold">
               Add Image
             </Text>
+            {fileUrl !=="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" ? (
+            <Text as="div" size="2" color="gray">
+              Image uploaded
+            </Text>
+          ) : (
             <Text as="div" size="2" color="gray">
               Upload from your device
             </Text>
+          )}
             <Button
               mt="4"
               variant="soft"
@@ -112,6 +113,7 @@ const handleFileChange = (event) => {
             </Button>
             <input id="fileInput" type="file" onChange={handleFileChange} style={{ display: 'none' }} />
             </Box>
+            
           </Flex>
           </Card>
           <Flex direction="column" mt="4">
@@ -124,6 +126,13 @@ const handleFileChange = (event) => {
             placeholder="Write a caption that will be used as a base for our AI powered caption generation"
           ></TextArea>
           <Flex direction="row" gap="3" mt="2" align="center">
+          <Text as="label" weight="medium" mb="2">
+          
+            Input tags you want for your caption<br />
+          </Text>
+          <Text as="div" size="2" color="gray">
+            {tags}
+            </Text>
             <Dialog.Root>
             <Dialog.Trigger>
               <Button variant="soft">
@@ -227,7 +236,7 @@ const handleFileChange = (event) => {
         </Flex>
         <Flex variant="row" justify="between" mt="4">
         <Button variant="surface">Cancel</Button>
-        <Button variant="soft" onClick={sendValues}>
+        <Button variant="soft">
           Next
         </Button>
         </Flex>
