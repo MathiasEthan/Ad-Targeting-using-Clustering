@@ -1,10 +1,12 @@
 from flask import Flask, jsonify
 import google.generativeai as genai
 from dotenv import load_dotenv
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
 load_dotenv()
+CORS(app)
 
 @app.route("/captions/<caption>/<tags>/<length>")
 def generate_captions(caption, tags, length):
@@ -30,7 +32,6 @@ def generate_captions(caption, tags, length):
         A 45-year-old unmarried man.
         A 60-year-old lady.
         A 25-year-old married man.
-        A 30-year-old woman.
 
     For each segment, provide a brief description of how the caption appeals to them, followed by the rewritten caption. Only generate the captions 
     and separate each one of them with a "|". Add some hashtags. Do not add any other text except the actual captions and hashtags.
