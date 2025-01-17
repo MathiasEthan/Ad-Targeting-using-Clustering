@@ -1,6 +1,8 @@
 import Payment from './pages/Payment';
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { Flex, Theme } from "@radix-ui/themes";
+import Result from './pages/Result';
+import background from './assets/background.jpeg'
 
 
 
@@ -8,6 +10,9 @@ function App() {
 
 
   return (
+    <div style={{backgroundImage: `url(${background})`,
+                backgroundSize: "100% 100%"
+    }}>
     <Theme
       accentColor="indigo"
       panelBackground="solid"
@@ -15,8 +20,11 @@ function App() {
       radius="medium"
       appearance="dark"
     >
-      <Payment />
-    </Theme>
+    <Flex justify="between">
+    <Payment />
+    <Result />
+    </Flex>
+    </Theme></div>
   );
 }
 
