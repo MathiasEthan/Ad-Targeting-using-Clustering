@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Flex, Text, Card, Inset, Strong, Section, Button } from "@radix-ui/themes";
 
-const Result = (length,tags,caption) => {
+const Result = (length,tags,caption, fileUrl) => {
   function getValues(){
     console.log(length)
     console.log(tags)
     console.log(caption)
+    console.log(fileUrl)
   }
     return (
       <Box position="relative" mb="9" mx="9">
@@ -16,7 +17,7 @@ const Result = (length,tags,caption) => {
               <Card size="2">
                 <Inset clip="padding-box" side="top" pb="current">
                   <img
-                    src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                    src={fileUrl}
                     alt="Bold typography"
                     style={{
                       display: "block",
