@@ -31,37 +31,8 @@ const handleFileChange = (event) => {
 
     return (
       <>
-        <Box
-          width="100%"
-          mt="0"
-          pt="4"
-          p="3"
-          position="fixed"
-          top="0"
-          style={{
-            backgroundColor: "#111113",
-            zIndex: 100,
-          }}
-        >
-          <Flex gap="3" justify="between">
-            <Box>
-              <Button variant="outline" radius="full" size="1">
-                Get Started
-              </Button>
-            </Box>
-            <Box mr="3">
-              <Flex gap="2" justify="between">
-                <Button variant="outline" radius="full" size="1">
-                  Register
-                </Button>
-                <Button variant="outline" radius="full" size="1">
-                  Login
-                </Button>
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-        <Flex direction="column" gap="4" width="40%" p="5" m="2">
+      
+        <Flex direction="column" gap="4" width="40%" p="2" m="2">
           <Heading as="h1" mt="0">
             Create your campaign today!
           </Heading>
