@@ -3,7 +3,10 @@ import "@radix-ui/themes/styles.css";
 import { Flex, Theme } from "@radix-ui/themes";
 import Result from './pages/Result';
 import background from './assets/background.png'
+import background1 from './assets/transparent.png'
 import {React, useState} from "react"
+import './App.css';
+import { AlignCenterHorizontallyIcon } from '@radix-ui/react-icons';
 
 
 function App() {
@@ -22,19 +25,20 @@ function App() {
     fontSize: "50px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    position: "fixed",
+    top: "0",
   };
 
   return (
-    <>
+    <div>
       <div style={myStyle}></div>
       <Theme
         accentColor="blue"
-        panelBackground="solid"
-        scaling="100%"
+        panelBackground="translucent"
         radius="medium"
         appearance="dark"
       >
-        <Flex justify="between">
+        <Flex justify="between" style={{backgroundImage: `url(${background})`, backgroundSize: "cover" }}>
           <Payment
             length={length}
             setLength={setLength}
@@ -49,7 +53,7 @@ function App() {
           <Result length={length} tags={tags} caption={caption} fileUrl={fileUrl} tempfileUrl={tempfileUrl} setTempfileUrl={setTempfileUrl} language={language} />
         </Flex>
       </Theme>
-    </>
+    </div>
   );
 }
 

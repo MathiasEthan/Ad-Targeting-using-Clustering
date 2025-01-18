@@ -31,37 +31,8 @@ const handleFileChange = (event) => {
 
     return (
       <>
-        <Box
-          width="100%"
-          mt="0"
-          pt="4"
-          p="3"
-          position="fixed"
-          top="0"
-          style={{
-            backgroundColor: "#111113",
-            zIndex: 100,
-          }}
-        >
-          <Flex gap="3" justify="between">
-            <Box>
-              <Button variant="outline" radius="full" size="1">
-                Get Started
-              </Button>
-            </Box>
-            <Box mr="3">
-              <Flex gap="2" justify="between">
-                <Button variant="outline" radius="full" size="1">
-                  Register
-                </Button>
-                <Button variant="outline" radius="full" size="1">
-                  Login
-                </Button>
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-        <Flex direction="column" gap="4" width="40%" p="5" m="2">
+      
+        <Flex direction="column" gap="4" width="40%" p="2" m="2">
           <Heading as="h1" mt="0">
             Create your campaign today!
           </Heading>
@@ -132,8 +103,8 @@ const handleFileChange = (event) => {
                   onChange={handleCaptionChange}
                   placeholder="Write a caption that will be used as a base for our AI powered caption generation"
                 ></TextArea>
-                <Text weight="medium" mb="2" gap="3" mt="4">
-                  Caption Tone
+                <Text weight="medium" mb="-1" mt="4" size="1" color="gray">
+                  Tags to use for caption generation
                 </Text>
                 <Flex direction="row" gap="3" mt="1" align="center">
                 
@@ -145,7 +116,7 @@ const handleFileChange = (event) => {
                     size="2"
                     mt="2"
                   >
-                    Tags:
+                    Tags: 
                     <br />
                   </Text>
                   <Text as="div" size="2" color="green">
