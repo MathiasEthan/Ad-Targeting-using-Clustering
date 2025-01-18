@@ -33,7 +33,7 @@ function App() {
     <div>
       <div style={myStyle}></div>
       <Theme
-        accentColor="blue"
+        accentColor="indigo"
         panelBackground="translucent"
         radius="medium"
         appearance="dark"
