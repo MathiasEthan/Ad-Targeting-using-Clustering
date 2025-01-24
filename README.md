@@ -1,6 +1,6 @@
-# **SmartAdGen**
+#  **Ad-Targeting-using-Clustering**
 
-SmartAdGen is an advanced ad-serving platform that uses clustering and machine learning to deliver highly targeted advertisements to users. By combining **DBSCAN** for user clustering and **Softmax** for predicting product categories, along with **Gemini** for AI-powered caption generation, SmartAdGen ensures precise ad delivery and high engagement.
+ Ad-Targeting-using-Clustering  is an advanced ad-serving platform that uses clustering and machine learning to deliver highly targeted advertisements to users. By combining **DBSCAN** for user clustering and **Softmax** for predicting product categories, along with **Gemini** for AI-powered caption generation,  Ad-Targeting-using-Clustering  ensures precise ad delivery and high engagement.
 
 ---
 
@@ -70,8 +70,8 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/smartadgen.git
-   cd SmartAdGen
+   git clone https://github.com/yourusername/ Ad-Targeting-using-Clustering .git
+   cd  Ad-Targeting-using-Clustering 
 2. Set up frontend:
    ```bash
    npm install
@@ -79,7 +79,7 @@ SmartAdGen is an advanced ad-serving platform that uses clustering and machine l
 3. Set up backend:
    ```bash
    cd backend
-   (first configure your gemini api key in a .env file in this folder using "API_KEY" as the key)
+   (first configure your gemini api key in a .env file in this folder using "API_KEY" as the variable name)
    python main.py
 4. Open your browser :
    ```bash
