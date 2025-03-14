@@ -3,9 +3,8 @@ import "@radix-ui/themes/styles.css";
 import { Flex, Theme } from "@radix-ui/themes";
 import Result from './pages/Result';
 import background from './assets/background.png'
-import {React, useState} from "react"
+import { useState} from "react"
 import './App.css';
-import { AlignCenterHorizontallyIcon } from '@radix-ui/react-icons';
 
 
 function App() {

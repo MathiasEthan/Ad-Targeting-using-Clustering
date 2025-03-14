@@ -52,7 +52,7 @@ const handleFileChange = (event) => {
                 Assets
               </Text>
               <Text size="2" ml="0" color="gray">
-                show us what you're working with
+                Show us what you're working with
               </Text>
               <Card mt="2">
                 <Flex gap="3" align="center">
@@ -173,7 +173,7 @@ const handleFileChange = (event) => {
                   <RadioCards.Item value="short" name="length">
                     <Flex direction="column" width="100%">
                       <Text weight="bold">Short</Text>
-                      <Text>1-2 Sentance</Text>
+                      <Text>1-2 Sentences</Text>
                     </Flex>
                   </RadioCards.Item>
                   <RadioCards.Item value="medium" name="length">
@@ -192,7 +192,7 @@ const handleFileChange = (event) => {
               </Box>
               <Flex direction="column" mt="3">
                 <Text weight="medium" mb="3">
-                  language
+                  Language
                 </Text>
                 <Select.Root defaultValue="english" mt="0" size="3" onValueChange={(value) => setLanguage(value)}>
                   <Select.Trigger />
@@ -231,7 +231,7 @@ const handleFileChange = (event) => {
             </CheckboxCards.Root>
           </Box>
 
-          <Flex variant="row" justify="end" mt="4">
+          <Flex variant="r  ow" justify="end" mt="4">
             <Button variant="surface">Cancel</Button>
           </Flex>
         </Flex>
